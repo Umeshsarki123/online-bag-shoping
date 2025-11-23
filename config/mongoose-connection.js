@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
 
+
+require('dotenv').config();
+
+const uri = process.env.MONGO_URI;
+
+
 mongoose
-.connect("mongodb+srv://Test_DB:Umesh%407601800312@cluster1.x64znym.mongodb.net/bag-shop")
+.connect(uri)
 .then(()=>{
     console.log('Data base connected successfully')    
 })
